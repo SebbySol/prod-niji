@@ -43,13 +43,11 @@ body {
   background: black !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   padding: 10px 0;
-  margin-bottom: 0 !important;
 }
 
 #navbar .nav-link {
   color: rgba(255, 255, 255, 0.85) !important;
   font-size: 13px;
-  font-weight: 400;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   transition: color 0.2s;
@@ -67,49 +65,47 @@ body {
   filter: invert(1);
 }
 
-/* ---- MOBILE ---- */
-@media (max-width: 991px) {
+#navbar .navbar-collapse {
+  background: black;
+}
 
-  #navbar .navbar-collapse {
-    background: black;
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
-    padding: 8px 0;
+/* Small Screen sizes */
+@media (max-width: 991.98px) {
+  #navbar .navbar-container {
+    display: block !important;
+  }
+  
+  .navbar-mobile-header {
+    min-height: 60px;
+    position: relative;
+  }
+
+  .navbar-brand-mobile {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+  }
+
+  .mobile-spacer {
+    width: 52px; 
   }
 
   #navbar .navbar-nav {
-    flex-direction: column !important;
-    align-items: stretch !important;
-    gap: 0 !important;
-    width: 100%;
-    padding: 0;
-    mx-auto: none;
+    align-items: center !important;
+    gap: 0px !important;            
+    padding-top: 20px;   
+    padding-bottom: 20px;
   }
 
   #navbar .nav-item {
     width: 100%;
+    text-align: center;
   }
 
   #navbar .nav-link {
-    padding: 14px 24px !important;
-    text-align: left !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-  }
-
-  #navbar .nav-item:has(.navbar-brand) {
-    display: none;
-  }
-}
-
-/* ---- DESKTOP ---- */
-@media (min-width: 992px) {
-
-  #navbar .navbar-nav {
-    gap: 8px !important;
-  }
-
-  #navbar .nav-link {
-    padding: 6px 8px !important;
-    text-align: center !important;
+    padding: 12px 0 !important;    
+    display: block;
   }
 }
 
@@ -154,7 +150,7 @@ body {
 
 .hero-title {
   font-family: 'Inter',sans-serif;
-  font-size: clamp(36px, 10vw, 100px);
+  font-size: clamp(36px, 10vw, 70px);
   font-weight: 500;
   color: white;
   letter-spacing: -0.02em;
