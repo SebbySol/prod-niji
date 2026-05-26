@@ -74,7 +74,7 @@ body {
   #navbar .navbar-container {
     display: block !important;
   }
-  
+
   .navbar-mobile-header {
     min-height: 60px;
     position: relative;
@@ -311,6 +311,63 @@ body {
   grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 10px;
 }
+
+.discover-grid {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr 1fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.discover-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.discover-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+}
+
+.wide-card .discover-img {
+  aspect-ratio: 16 / 9;
+}
+
+.discover-card-body {
+  padding-top: 16px;
+}
+
+.discover-title {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.discover-text {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 991.98px) {
+  .discover-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .wide-card .discover-img,
+  .discover-img {
+    aspect-ratio: 16 / 9;
+  }
+}
+
 .discover-img {
   width: 100%;
   aspect-ratio: 1/1;
@@ -325,28 +382,28 @@ body {
   aspect-ratio: auto;
   height: 100%;
   border-radius: 4px;
-  background: url(./img/beat-1.jpg) center/cover no-repeat;
+  background: url(./img/disc-1.png) center/cover no-repeat;
 }
 
 .discover-img-2 {
   width: 100%;
   aspect-ratio: 1/1;
   border-radius: 4px;
-  background: url(./img/beat-2.jpg) center/cover no-repeat;
+  background: url(./img/disc-2.png) center/cover no-repeat;
 }
 
 .discover-img-3 {
   width: 100%;
   aspect-ratio: 1/1;
   border-radius: 4px;
-  background: url(./img/beat-3.jpg) center/cover no-repeat;
+  background: url(./img/disc-3.png) center/cover no-repeat;
 }
 
 .discover-img-4 {
   width: 100%;
   aspect-ratio: 1/1;
   border-radius: 4px;
-  background: url(./img/beat-4.jpg) center/cover no-repeat;
+  background: url(./img/disc-4.png) center/cover no-repeat;
 }
 /* Images */
 
