@@ -29,6 +29,7 @@ body {
   font-size: 13px;
   font-weight: 400;
   letter-spacing: 0.01em;
+  margin-bottom: 0;
 }
 .announcement-bar a {
   color: black;
@@ -38,37 +39,85 @@ body {
 }
 
 /* ---- NAVBAR ---- */
-.announcement-bar {
-  margin-bottom: 0;
-  padding-bottom: 10px;
-}
-
 #navbar {
   background: black !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   padding: 10px 0;
   margin-bottom: 0 !important;
 }
+
 #navbar .nav-link {
   color: rgba(255, 255, 255, 0.85) !important;
   font-size: 13px;
   font-weight: 400;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  padding: 6px 0 !important;
   transition: color 0.2s;
 }
+
 #navbar .nav-link:hover {
   color: white !important;
 }
+
 #navbar .navbar-toggler {
   border-color: rgba(255, 255, 255, 0.2);
 }
+
 #navbar .navbar-toggler-icon {
   filter: invert(1);
 }
 
+/* ---- MOBILE ---- */
+@media (max-width: 991px) {
+
+  #navbar .navbar-collapse {
+    background: black;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 8px 0;
+  }
+
+  #navbar .navbar-nav {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0 !important;
+    width: 100%;
+    padding: 0;
+    mx-auto: none;
+  }
+
+  #navbar .nav-item {
+    width: 100%;
+  }
+
+  #navbar .nav-link {
+    padding: 14px 24px !important;
+    text-align: left !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  #navbar .nav-item:has(.navbar-brand) {
+    display: none;
+  }
+}
+
+/* ---- DESKTOP ---- */
+@media (min-width: 992px) {
+
+  #navbar .navbar-nav {
+    gap: 8px !important;
+  }
+
+  #navbar .nav-link {
+    padding: 6px 8px !important;
+    text-align: center !important;
+  }
+}
+
 /* ---- HERO ---- */
+#hero {
+  scroll-margin-top: 1000px;
+}
+
 .hero-wrapper {
   width: 100%;
   height: 75vh;
@@ -230,6 +279,10 @@ body {
 }
 
 /* ---- DISCOVER SECTION ---- */
+#discover {
+  scroll-margin-top: 120px;
+}
+
 .discover-section {
   background: black;
   padding: 60px 0 70px;
@@ -313,6 +366,10 @@ body {
 }
 
 /* ---- ARTIST SECTION ---- */
+#about {
+  scroll-margin-top: 120px;
+}
+
 .niji-section {
   background: var(--cream);
   padding: 70px 0 80px;
