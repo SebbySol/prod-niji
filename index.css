@@ -1,0 +1,365 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --cream: #f5f0d0;
+  --dark: #111111;
+  --card-dark: #1a1a1a;
+  --muted: #888888;
+  --font-display: "Inter", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  background: black;
+  color: white;
+  padding-top: 0;
+}
+
+/* ---- ANNOUNCEMENT BAR ---- */
+.announcement-bar {
+  background: var(--cream);
+  color: black;
+  text-align: center;
+  padding: 10px 16px;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+.announcement-bar a {
+  color: black;
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* ---- NAVBAR ---- */
+.announcement-bar {
+  margin-bottom: 0;
+  padding-bottom: 10px;
+}
+
+#navbar {
+  background: black !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 10px 0;
+  margin-bottom: 0 !important;
+}
+#navbar .nav-link {
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 6px 0 !important;
+  transition: color 0.2s;
+}
+#navbar .nav-link:hover {
+  color: white !important;
+}
+#navbar .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+#navbar .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* ---- HERO ---- */
+.hero-wrapper {
+  width: 100%;
+  height: 75vh;
+  min-height: 480px;
+  overflow: hidden;
+  background: url(./img/castle.jpg);
+  position: relative;
+}
+
+.hero-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.466) 0%, rgba(0, 0, 0, 0.74) 100%);
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-title {
+  font-family: 'Inter',sans-serif;
+  font-size: clamp(36px, 10vw, 100px);
+  font-weight: 500;
+  color: white;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+  z-index: 2;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.5);
+}
+.hero-desc {
+  font-size: clamp(14px, 2vw, 18px);
+  color: rgba(255,255,255,0.75);
+  max-width: 520px;
+  margin: 0 auto 28px;
+  z-index: 3;
+  line-height: 1.7;
+}
+.hero-cta {
+  display: inline-block;
+  padding: 12px 36px;
+  background: var(--cream);
+  color: black;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  z-index: 4;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: opacity 0.2s;
+}
+
+/* ---- BEAT CARD VIDEO ---- */
+.beat-card-video {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+  display: block;
+}
+
+
+/* ---- SHOP NOW SECTION ---- */
+#beats {
+  scroll-margin-top: 120px;
+}
+
+.shop-section {
+  background: black;
+  padding: 150px 0 150px;
+  text-align: center;
+}
+.shop-heading {
+  font-family: var(--font-display);
+  font-size: clamp(72px, 12vw, 140px);
+  color: var(--cream);
+  line-height: 0.9;
+  letter-spacing: 0.02em;
+  margin-bottom: 12px;
+}
+.shop-subheading {
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 48px;
+}
+
+/* ---- BEAT CARDS ---- */
+
+/* ── BEAT CARD ── */
+.beat-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  aspect-ratio: 3/4;
+}
+
+.beat-card-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* gradient overlay */
+.beat-card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%);
+  display: flex;
+  align-items: flex-end;
+  z-index: 2;
+}
+
+.beat-card-body {
+  padding: 16px;
+  width: 100%;
+}
+
+.beat-card-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+
+.beat-card-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.3);
+  margin-bottom: 10px;
+}
+
+.beat-card-desc {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.6;
+}
+
+/* ---- DISCOVER SECTION ---- */
+.discover-section {
+  background: black;
+  padding: 60px 0 70px;
+}
+.discover-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+.discover-heading {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+.view-more {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.view-more:hover {
+  color: white;
+}
+
+.discover-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 10px;
+}
+.discover-img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
+}
+
+/* Images */
+.discover-img-1 {
+  width: 100%;
+  aspect-ratio: auto;
+  height: 100%;
+  border-radius: 4px;
+  background: url(./img/beat-1.jpg) center/cover no-repeat;
+}
+
+.discover-img-2 {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 4px;
+  background: url(./img/beat-2.jpg) center/cover no-repeat;
+}
+
+.discover-img-3 {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 4px;
+  background: url(./img/beat-3.jpg) center/cover no-repeat;
+}
+
+.discover-img-4 {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 4px;
+  background: url(./img/beat-4.jpg) center/cover no-repeat;
+}
+/* Images */
+
+@media (max-width: 768px) {
+  .discover-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 480px) {
+  .discover-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---- ARTIST SECTION ---- */
+.niji-section {
+  background: var(--cream);
+  padding: 70px 0 80px;
+}
+.niji-img {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 4px;
+  display: block;
+}
+.niji-img-placeholder {
+  width: 100%;
+  max-width: 280px;
+  aspect-ratio: 3/4;
+  border-radius: 4px;
+  background: url(./img/niji.png) center/cover no-repeat;
+}
+
+.niji {
+  font-family: var(--font-display);
+  font-size: clamp(52px, 8vw, 80px);
+  color: black;
+  line-height: 1;
+  margin-bottom: 16px;
+  letter-spacing: 0.02em;
+}
+.niji-divider {
+  height: 1px;
+  background: rgba(0, 0, 0, 0.15);
+  margin-bottom: 20px;
+  max-width: 480px;
+}
+.niji-bio {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.7);
+  line-height: 1.8;
+  max-width: 880px;
+}
+
+/* ---- FOOTER ---- */
+footer {
+  background: black;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-weight: 200;
+  padding: 50px 16px;
+  font-size: 1rem;
+  color: var(--cream);
+  letter-spacing: 0.04em;
+}
