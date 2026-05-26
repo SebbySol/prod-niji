@@ -20,6 +20,10 @@ body {
   padding-top: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* ---- ANNOUNCEMENT BAR ---- */
 .announcement-bar {
   background: var(--cream);
